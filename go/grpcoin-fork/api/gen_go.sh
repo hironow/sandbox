@@ -16,3 +16,8 @@
 readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "${SCRIPT_DIR}/.."
 protoc --go_out=. --go-grpc_out=. -I=./api/ ./api/grpcoin.proto
+
+# prepare protoc
+# go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26
+# go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1
+# export PATH="$PATH:$(go env GOPATH)/bin"
